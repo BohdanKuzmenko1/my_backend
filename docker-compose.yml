@@ -8,28 +8,17 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - news_net
+      - myapp
 
   backend:
-    build: ./backend/BNews-master
+    build: ./backend
     ports:
       - "8080:8080"
     restart: always
     networks:
-      - news_net
+      - myapp
     depends_on:
       - database
 
-  frontend:
-    build: ./frontend
-    ports:
-      - "3000:3000"
-    restart: always
-    networks:
-      - news_net
-    depends_on:
-      - backend
-
-
 networks:
-  news_net:
+  myapp:

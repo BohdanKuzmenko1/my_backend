@@ -1,2 +1,2 @@
-CREATE DATABASE news_db;
-USE news_db;
+CREATE DATABASE myapp_db;
+USE myapp_db;
